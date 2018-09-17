@@ -1,0 +1,225 @@
+.fr {
+	float: right;
+}
+
+#box {
+	margin: 0 auto;
+	position: relative;
+	border-radius: 4px;
+	background: url(../img/bg.jpg) 0 0 no-repeat;
+	width: 450px;
+	height: 656px;
+	overflow: hidden;
+}
+
+#cdisplay {
+	position: absolute;
+	width: 450px;
+	height: 650px;
+	top: 0;
+	left: 0;
+}
+
+.nav_top {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 450px;
+	height: 60px;
+}
+
+.nav_top img {
+	width: 40px;
+	height: 40px;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.nav {
+	position: absolute;
+	width: 450px;
+	height: 596px;
+	top: 160px;
+	left: 50%;
+	margin-left: -120px;
+}
+
+.nav li {
+	width: 240px;
+	height: 80px;
+	text-align: center;
+	line-height: 80px;
+}
+
+.nav button {
+	width: 200px;
+	height: 40px;
+	border-radius: 20px;
+	font-size: 18px;
+	background: 0;
+	color: white;
+	cursor: pointer;
+	border: 2px solid white;
+	letter-spacing: 10px;
+}
+
+.nav li:hover button {
+	color: #2fa8ec;
+	border: 2px solid #2fa8ec;
+	text-shadow: 5px 5px 5px #1a1a1a;
+}
+
+#box .slideBox {
+	width: 430px;
+	height: 300px;
+	border-radius: 10px;
+	position: absolute;
+	left: 10px;
+	top: 656px;
+}
+
+#box .slideBox li {
+	width: 390px;
+	height: 30px;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+#box .slideBox li>button{
+	height: 30px;
+	outline: none;
+	border-radius: 15px;
+	text-align: center;
+	background: rgba(0,0,0,0.3);
+	color: #FFFFFF;
+}
+
+#box .slideBox li>button:hover{
+	color: #2fa8ec;
+	border: 2px solid #2fa8ec;
+	/*text-shadow: 5px 5px 5px #1a1a1a;*/
+}
+
+#box .slideBox li>span {
+	display: block;
+	width: 120px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 20px;
+	background: #1A9295;
+	float: left;
+	border-radius: 15px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+#box .slideBox li>a {
+	display: block;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 20px;
+	background: #1A9295;
+	float: right;
+	border-radius: 15px;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	color: #FFFFFF;
+}
+
+#box .contBox {
+	width: 410px;
+	height: 220px;
+	background: rgba(188,203,219, 0.5);
+	border-radius: 10px;
+	position: relative;
+	margin: 10px;
+}
+
+
+/*游戏设置*/
+
+#box #set_ {
+	background:linear-gradient(to left,#fff, #0D4D95);
+}
+
+#box #set_ li {
+	background: #36E0E5;
+}
+
+#box #set_ .contBox li {
+	background: 0;
+	margin-top: 10px;
+	padding-left: 120px;
+}
+
+#set_ .contBox button {
+	border: 0;
+	width: 150px;
+	height: 60px;
+	font-size: 20px;
+	margin-top: 10px;
+	text-align: left;
+	background: 0;
+	cursor: pointer;
+}
+
+
+/*游戏帮助*/
+
+#box #help_ {
+	background: linear-gradient(to left,#fff, #0D4D95);
+}
+
+#box #help_ li {
+	background: #36E0E5;
+}
+
+#help_ .contBox p {
+	font-size: 16px;
+	padding: 10px;
+	text-indent: 2em;
+}
+
+#help_ .contBox p:nth-child(1) {
+	font-size: 20px;
+	font-weight: 900;
+	text-align: center;
+}
+
+#help_ .contBox p:nth-child(3) {
+	padding-top: 0;
+	line-height: 20px;
+}
+
+
+/*游戏退出*/
+
+#box #quit_ {
+	background: linear-gradient(to left,#fff, #0D4D95);
+}
+
+#box #quit_ li {
+	background: #36E0E5;
+}
+
+#box #quit_ #yes,
+#no {
+	width: 60px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 10px;
+	text-align: center;
+	background: #02499B;
+	position: absolute;
+	top: 95px;
+	left: 95px;
+	cursor: pointer;
+	color:white;
+}
+
+#box #quit_ #no {
+	left: 255px;
+}

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/default.css">
+		<title>启动动画</title>
+		<style type="text/css">
+			.box {
+				width: 450px;
+				height: 656px;
+				margin: auto;
+				position: relative;
+			}
+			
+			#container {
+				background: url(img/bg.jpg) 0 0 no-repeat;
+				width: 450px;
+				height: 656px;
+				border-radius: 10px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				overflow: hidden;
+			}
+			
+			#loading-center {
+				width: 80px;
+				height: 80px;
+				position: relative;
+				top: 542px;
+				left: 200px;
+			}
+			
+			.object {
+				-moz-border-radius: 50% 50% 50% 50%;
+				-webkit-border-radius: 50% 50% 50% 50%;
+				border-radius: 50% 50% 50% 50%;
+				position: absolute;
+				border-left: 5px solid #0e6da7;
+				border-right: 5px solid #0e6da7;
+				border-top: 5px solid transparent;
+				border-bottom: 5px solid transparent;
+				-webkit-animation: animate 2s infinite;
+				animation: animate 2s infinite;
+			}
+			
+			#object_one {
+				left: 30px;
+				top: 30px;
+				width: 20px;
+				height: 20px;
+			}
+			
+			#object_two {
+				left: 20px;
+				top: 20px;
+				width: 40px;
+				height: 40px;
+				-webkit-animation-delay: 0.1s;
+				animation-delay: 0.1s;
+			}
+			
+			#object_three {
+				left: 10px;
+				top: 10px;
+				width: 60px;
+				height: 60px;
+				-webkit-animation-delay: 0.2s;
+				animation-delay: 0.2s;
+			}
+			
+			#object_four {
+				left: 0px;
+				top: 0px;
+				width: 80px;
+				height: 80px;
+				-webkit-animation-delay: 0.3s;
+				animation-delay: 0.3s;
+			}
+			
+			@-webkit-keyframes animate {
+				50% {
+					-ms-transform: rotate(180deg);
+					-webkit-transform: rotate(180deg);
+					transform: rotate(180deg);
+				}
+				100% {
+					-ms-transform: rotate(0deg);
+					-webkit-transform: rotate(0deg);
+					transform: rotate(0deg);
+				}
+			}
+			
+			@keyframes animate {
+				50% {
+					-ms-transform: rotate(180deg);
+					-webkit-transform: rotate(180deg);
+					transform: rotate(180deg);
+				}
+				100% {
+					-ms-transform: rotate(0deg);
+					-webkit-transform: rotate(0deg);
+					transform: rotate(0deg);
+				}
+			}
+			
+			#loadText {
+				position: absolute;
+				top: 600px;
+				left: 350px;
+				font-size: 18px;
+				color: #0e6da7;
+				font-weight: bold;
+				width: 100%;
+				height: 18px;
+			}
+			
+			span {
+				position: absolute;
+				font-size: 100px;
+			}
+			
+			#span2 {
+				top: -120px;
+				left: 50px;
+				font-family: consolas;
+				text-shadow: 5px 5px 5px rgba(28,245,247,0.5);
+				color: rgba(28,245,247,0.5);
+			}
+			
+			#span0 {
+				top: -150px;
+				left: 150px;
+				font-family: consolas;
+				text-shadow: 5px 5px 5px rgba(250,170,28,0.5);
+				color: rgba(250,170,28,0.9);
+			}
+			
+			#span4 {
+				top: -180px;
+				left: 250px;
+				font-family: consolas;
+				text-shadow: 5px 5px 5px rgba(15,245,118,0.5);
+				color: rgba(15,245,118,0.9);
+			}
+			
+			#span8 {
+				top: -210px;
+				left: 350px;
+				font-family: consolas;
+				text-shadow: 5px 5px 5px rgba(80,240,21,0.5);
+				color: rgba(80,240,21,0.9);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box">
+			<div id="container">
+				<span id="span2">2</span>
+				<span id="span0">0</span>
+				<span id="span4">4</span>
+				<span id="span8">8</span>
+
+				<div id="loading-center">
+					<div class="object" id="object_four"></div>
+					<div class="object" id="object_three"></div>
+					<div class="object" id="object_two"></div>
+					<div class="object" id="object_one"></div>
+				</div>
+
+				<span id="loadText">
+						正在载入
+					</span>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			window.onload = function() {
+				//载入中
+				var str;
+				var textTimer1 = setInterval(function() {
+					$("loadText").innerHTML += ".";
+					str = $("loadText").innerHTML;
+				}, 250);
+				var textTimer2 = setInterval(function() {
+					str = str.substring(0, str.length - 2);
+					$("loadText").innerHTML = str;
+				}, 500);
+
+				var height1 = -120;
+				var height2 = -150;
+				var height3 = -180;
+				var height4 = -210;
+				//2048效果
+				var spanTimer1 = setInterval(function() {
+					height1 += 2;
+					$("span2").style.top = height1 + "px";
+					if(height1 >= 150) {
+						clearInterval(spanTimer1);
+					}
+				}, 5);
+
+				var spanTimer2 = setInterval(function() {
+					height2 += 2;
+					$("span0").style.top = height2 + "px";
+					if(height2 >= 150) {
+						clearInterval(spanTimer2);
+					}
+				}, 5);
+
+				var spanTimer3 = setInterval(function() {
+					height3 += 2;
+					$("span4").style.top = height3 + "px";
+					if(height3 >= 150) {
+						clearInterval(spanTimer3);
+					}
+				}, 5);
+
+				var spanTimer4 = setInterval(function() {
+					height4 += 2;
+					$("span8").style.top = height4 + "px";
+					if(height4 >= 150) {
+						clearInterval(spanTimer4);
+					}
+				}, 5);
+				//页面跳转
+				setTimeout(function() {
+					window.location.href = "index.html";
+				}, 1500);
+			}
+			//获取元素id
+			function $(id) {
+				return document.getElementById(id);
+			}
+			//清除所有计时器
+			function clearTimer() {
+				var timer = setTimeout(function() {
+					for(var i = 0; i < timer; i++) {
+						clearInterval(i);
+					}
+				}, 0);
+			}
+		</script>
+	</body>
+
+</html>

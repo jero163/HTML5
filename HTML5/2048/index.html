@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主界面</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+</head>
+<body>
+    <div id="box">
+        <canvas id="cdisplay"></canvas>
+
+        <div  class="nav_top">
+            <img id="imgSet" class="fr" src="img/set.png">
+            <img id="imgHelp" class="fr" src="img/help.png">
+        </div>
+        <ul class="nav">
+            <li><button id="start">开始游戏</button></li>
+            <li><button id="set">游戏设置</button></li>
+            <li><button id="help">游戏帮助</button></li>
+            <li><button id="quit">退出游戏</button></li>
+        </ul>
+        <ul class="slideBox" id="set_">
+            <li><span>游戏设置</span>
+                <a id="closeSet">×</a>
+            </li>
+            <div class="contBox">
+                    <li><button id="num2048">4 X 4&nbsp;&nbsp;&nbsp;&nbsp; 2048</button></li>
+                    <li><button id="num4096">4 X 4&nbsp;&nbsp;&nbsp;&nbsp; 4096</button></li>
+                    <li><button id="numLarge">4 X 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;∞&nbsp;&nbsp;&nbsp; </button></li>
+            </div>
+        </ul>
+        <ul class="slideBox" id="help_">
+            <li><span>游戏帮助</span>
+                <a id="closeHelp">×</a>
+            </li>
+            <div class="contBox">
+                <p>游戏规则</p>
+                <p>电脑：按键盘的方向键移动方块</p>
+                <p>每次控制所有方块向同一个方向运动，两个相同数字的方块撞在一起之后合并成为他们的和，每次操作之后会在空白的方格处随机生成一个2或者4，最终得到一个“2048”的方块就算胜利了。如果16个格子全部填满并且相邻的格子都不相同也就是无法移动的话，那么Gameover。</p>
+            </div>
+        </ul>
+        <ul class="slideBox" id="quit_">
+            <li><span>确认退出</span>
+                <a id="closeQuit">×</a>
+            </li>
+            <div class="contBox">
+                <a id="yes">退出</a>
+                <a id="no">取消</a>
+            </div>
+        </ul>
+
+    </div>
+
+    <script type="text/javascript" src="js/jquery.1.12.4.min.js"></script>
+    <script src="js/Canvas.js" type="text/javascript"></script>
+    <script src="js/index.js" type="text/javascript"></script>
+    <script>
+        window.onload = function() {
+        	listenURL();
+            startGame();
+            setGame();
+            helpGame();
+            quitGame();
+            setClose();
+            quitGameOrNot();
+            setBtnListener();
+            mouseOverImg();
+            var dotline = new Dotline({
+                dom:'cdisplay',//画布id
+                cw:450,//画布宽
+                ch:650,//画布高
+                ds:30,//点的个数
+                r:1,//圆点半径
+                cl:'#2ad2fc',//粒子线颜色
+                dis:100//触发连线的距离
+            }).start();
+        }
+    </script>
+
+</body>
+</html>

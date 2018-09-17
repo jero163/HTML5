@@ -1,0 +1,106 @@
+.gameBody .box {
+	width: 430px;
+	height: 500px;
+	margin: auto;
+	border-radius: 10px;
+	background: rgba(16,17,21,0.8);
+	overflow: hidden;
+	position: absolute;
+	top: 78px;
+	left: 450px;
+}
+
+
+/*topBox*/
+
+.gameBody .box .topBox {
+	width: 410px;
+	height: 70px;
+	background: rgba(57, 86, 116, 0.5);
+	border-radius: 10px;
+	margin: 10px 10px 0 10px;
+	position: relative;
+}
+
+.gameBody .box .topBox #close{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 10px;
+	left: 370px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 20px;
+	color: #FFFFFF;
+	border: 0;
+	border-radius: 15px;
+	background: rgba(131,145,153,0.5);
+	cursor: pointer;
+}
+
+.gameBody .box .topBox span {
+	display: block;
+	width: 410px;
+	height: 70px;
+	line-height: 70px;
+	text-align: center;
+	font-size: 40px;
+	color: #FFFFFF;
+
+}
+
+
+/*list*/
+
+.gameBody .box .rankBox{
+	width: 410px;
+	height: 400px;
+	margin: auto;
+	margin-top: 10px;
+	overflow: hidden;
+	position: relative;
+	border-radius: 10px;
+	background: rgba(255, 255, 255, 0.5);
+}
+
+.gameBody .box .ranklist {
+	width: 410px;
+	height: auto;
+	border-radius: 10px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.gameBody .box .ranklist li{
+	width: 384px;
+	height: 34px;
+	margin: 10px 10px;
+	border-radius: 5px;
+	background: rgba(25, 53, 67, 0.5);
+	padding: 3px;
+}
+
+.gameBody .box .ranklist .rank{
+	display: block;
+	width: 34px;
+	height: 34px;
+	line-height: 34px;
+	border-radius: 17px;
+	margin-left: 30px;
+	text-align: center;
+	background: rgba(216,76,41, 0.8);
+	color: #e0e0e0;
+	float: left;
+}
+
+.gameBody .box .ranklist .score {
+	display: block;
+	width: 180px;
+	height: 34px;
+	line-height: 34px;
+	float: right;
+	text-align: right;
+	margin-right: 30px;
+	color: rgb(135,163,43);
+}

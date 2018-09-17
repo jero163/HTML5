@@ -1,0 +1,124 @@
+﻿/*gameBody:放所有游戏容器的盒子*/
+
+.gameBody {
+	width: 450px;
+	height: auto;
+	margin: auto;
+	border-radius: 10px;
+	background: url(../img/bg.jpg) 0 0 no-repeat;
+	overflow: hidden;
+	position: relative;
+}
+
+/*data:存放游戏数据，例如分数时间等*/
+
+.topBox {
+	width: 440px;
+	height: 104px;
+	margin: auto;
+	border-radius: 8px;
+	padding: 2px;
+}
+
+
+/*.topBox, .dataBox*/
+
+.topBox .dataBox,
+.btnBox {
+	width: 440px;
+	height: 50px;
+	padding-top: 5px;
+}
+
+.topBox .dataBox>.data,
+.btnBox>.btn {
+	width: 120px;
+	float: left;
+	border-radius: 4px;
+	border: 0;
+	outline: none;
+}
+
+.topBox .btnBox>.btn:hover{
+	color: #2fa8ec;
+	/*border: 2px solid #2fa8ec;*/
+	text-shadow: 5px 5px 5px #1a1a1a;	
+}
+
+.topBox .dataBox>.data {
+	height: 40px;
+	background: rgba(185,171,158,0.5);
+}
+
+.topBox .dataBox>.data>p{
+	text-align: center;
+	height: 20px;
+	line-height: 20px;
+}
+
+.topBox .dataBox>.data>p:nth-child(1){
+	color: #E9DEC1;
+}
+
+.topBox .dataBox>.data>p:nth-child(2){
+	color: #FFFFFF;
+}
+
+.topBox .btnBox>.btn {
+	height: 30px;
+	line-height: 30px;
+	background: rgba(34,118,154,0.5);
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.topBox .btnBox #cancel{
+	text-decoration: none;
+}
+
+
+.topBox .dataBox>.data:nth-child(2),
+.btnBox>.btn:nth-child(2) {
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+/*box:游戏实体区，存放格子*/
+
+.gameBox {
+	width: 432px;
+	height: 432px;
+	border: 2px solid #c0c0c0;
+	border-radius: 8px;
+	padding: 2px;
+	margin: auto;
+}
+
+.gameBox .cell {
+	width: 100px;
+	height: 100px;
+	border: 2px solid #c0c0c0;
+	border-radius: 4px;
+	float: left;
+	margin: 2px;
+	background: rgba(255,255,255,0.5);
+}
+
+.gameBox .cell .number{
+	display: block;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+/*cartoon:动画区，播放一些有趣的动画*/
+.cartoon{
+	width: 440px;
+	height: 104px;
+	margin: auto;
+	border-radius: 10px;
+	padding: 2px;
+}
+
