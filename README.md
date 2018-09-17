@@ -5,16 +5,6 @@ HTML5游戏和网页项目<br>
 </h4>
 
 <h5>
-本项目属于初步接触HTML5而开发的项目，因此不是非常规范，入口可以是任意html页面。<br> 					
-&nbsp;&nbsp;&nbsp;&nbsp;This project is a project developed in the initial contact with HTML5, so it is not very standard, and the portal can be any html page. 
-</h5>
-
-<h5>
-2048小游戏由于使用了cookie，故而完整项目需要搭载服务器，直接用浏览器打开部分记分功能和设置功能无法启用，游戏正常运行。建议使用HBuilder等高级编辑器打开项目，免于搭载服务器。<br>
-&nbsp;&nbsp;&nbsp;&nbsp;The game 2048 due to the use of cookies, the complete project needs to be equipped with a server, and the partial scoring function and setting function can not be enabled by directly opening the browser, and the game runs normally. It is recommended to open the project with an advanced editor such as HBuilder, free of the server.	
-</h5>
-
-<h5>
-本人为在校学生，后期将会不定期更新个人小项目分享出来。<br>
-&nbsp;&nbsp;&nbsp;&nbsp;I am a student at school, and I will share my personal project from time to time.
+本人为在校学生，软件工程专业，大三下开始接触HTML5，目前正在积极学习HTML5相关开发知识，并通过自己完成一些小项目逐步掌握这些知识。对WEB前端开发有浓厚的兴趣，后期将会不定期更新个人小项目分享出来。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;I am a student at school, a major in software engineering. I started to work with HTML5 in my junior year. I am actively learning HTML5 related development knowledge and gradually mastering this knowledge by completing some small projects myself. Have a strong interest in the development of WEB front-end, and will update personal small projects from time to time.
 </h5>
