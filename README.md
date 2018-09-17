@@ -16,5 +16,5 @@ The game 2048 due to the use of cookies, the complete project needs to be equipp
 
 <h5>
 3.本人为在校学生，后期将会不定期更新个人小项目分享出来。<br>
-3. I am a student at school, and I will share my personal project from time to time.
+I am a student at school, and I will share my personal project from time to time.
 </h5>
