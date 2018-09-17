@@ -16,5 +16,5 @@ HTML5游戏和网页项目<br>
 
 <h5>
 本人为在校学生，后期将会不定期更新个人小项目分享出来。<br>
-&nbsp;&nbsp;I am a student at school, and I will share my personal project from time to time.
+&nbsp;&nbsp;&nbsp;&nbsp;I am a student at school, and I will share my personal project from time to time.
 </h5>
